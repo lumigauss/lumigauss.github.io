@@ -1558,48 +1558,38 @@ section,
 }
 
 
-#authors {
+.authors {
   width: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
+  margin-top: 2em;
+  display: flex;
+  float: left;
+  justify-content: center;
 }
 
-ul#authors {
-  margin-left: 0;
-  margin-right: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  margin-top: 2em;
-}
 
 .affiliations {
   padding: 0;
   margin: 0;
 }
 
-ul#authors.names {
+.authors {
   font-weight: bold;
+  font-size: larger;
 }
 
-ul#authors.names sup {
+.authors sup {
   font-weight: normal;
 }
 
-ul#authors.affiliations {
-  margin-top: 0 !important;
+.affiliations {
+  margin-top: 1em;
+  font-weight: normal;
+  font-size: medium;
 }
 
-ul#authors li {
-  display: inline;
-  list-style: none;
-  text-align: center;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  float: left;
-}
 
 #abstract {
   text-align: justify;
@@ -1614,4 +1604,9 @@ ul#authors li {
 
 .portfolio video {
   width: 100%;
+}
+
+.authors-container {
+  width: 100%;
+  text-align: center;
 }
