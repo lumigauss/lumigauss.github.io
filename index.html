@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LumiGauss: Relightable Gaussian Splatting in the Wild</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="favicon.svg" rel="icon" />
+    <link href="favicon.svg" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/academicons.min.css" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="index-page">
+    <header
+      id="header"
+      class="header d-flex flex-column justify-content-center"
+    >
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#abstract" class="active"
+              ><i class="bi bi-house navicon"></i><span>Abstract</span></a
+            >
+          </li>
+          <li>
+            <a href="#visuals"
+              ><i class="bi bi-image-alt navicon"></i><span>Visuals</span></a
+            >
+          </li>
+          <li>
+            <a href="#bib"
+              ><i class="bi bi-quote navicon"></i><span>Bib</span></a
+            >
+          </li>
+          <li>
+            <a href="/lumigauss.pdf"
+              ><i class="fas fa-file-pdf"></i><span>Paper</span></a
+            >
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2408.04474v2"
+              ><i class="ai ai-arxiv navicon"></i><span>ArXiv</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/joaxkal/lumigauss"
+              ><i class="bi bi-github navicon"></i><span>GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section light-background">
+        <!-- <img src="assets/img/hero-bg.jpg" alt="" /> -->
+
+        <div class="container" data-aos="zoom-out">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <h2 id="title">
+                LumiGauss: Relightable Gaussian Splatting in the Wild
+              </h2>
+              <p id="abstract">
+                Decoupling lighting from geometry using unconstrained photo
+                collections is notoriously challenging. Solving it would benefit
+                many users as creating complex 3D assets takes days of manual
+                labor. Many previous works have attempted to address this issue,
+                often at the expense of output fidelity, which questions the
+                practicality of such methods. We introduce LumiGauss—a technique
+                that tackles 3D reconstruction of scenes and environmental
+                lighting through 2D Gaussian Splatting. Our approach yields
+                high-quality scene reconstructions and enables realistic
+                lighting synthesis under novel environment maps. We also propose
+                a method for enhancing the quality of shadows, common in outdoor
+                scenes, by exploiting spherical harmonics properties. Our
+                approach facilitates seamless integration with game engines and
+                enables the use of fast precomputed radiance transfer. We
+                validate our method on the NeRF-OSR dataset, demonstrating
+                superior performance over baseline methods. Moreover, LumiGauss
+                can synthesize realistic images for unseen environment maps.
+              </p>
+
+              <div>
+                <ul id="authors" class="names">
+                  <li>Joanna Kaleta<sup>1,2</sup></li>
+                  <li>Kacper Kania<sup>1</sup></li>
+                  <li>Tomasz Trzciński<sup>1,4,5</sup></li>
+                  <li>Marek Kowalski<sup>3</sup></li>
+                </ul>
+              </div>
+
+              <div>
+                <ul id="authors" class="affiliations">
+                  <li><sup>1</sup>Warsaw University of Technology</li>
+                  <li><sup>2</sup>Sano Centre for Computational Medicine</li>
+                  <li><sup>3</sup>Microsoft</li>
+                  <li><sup>4</sup>IDEAS NCBR</li>
+                  <li><sup>5</sup>Tooploox</li>
+                </ul>
+              </div>
+
+              <br />
+              <div class="social-links">
+                <a href="https://arxiv.org/abs/2408.04474v2"
+                  ><i class="ai ai-arxiv"></i><span></span
+                ></a>
+                <a href="https://github.com/joaxkal/lumigauss"
+                  ><i class="bi bi-github"></i><span></span
+                ></a>
+              </div>
+
+              <!-- <div class="social-links">
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Portfolio Section -->
+      <section id="visuals" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Qualitative Results</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter=".filter-novel-light-synthesis"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <!-- <li data-filter="*" class="filter-active">All</li> -->
+              <li
+                data-filter=".filter-novel-light-synthesis"
+                class="filter-active"
+              >
+                Novel View and Trained Light Synthesis
+              </li>
+              <li data-filter=".filter-point-light-synthesis">
+                Point Light Synthesis
+              </li>
+              <li data-filter=".filter-sky-map">Sky Map</li>
+              <li data-filter=".filter-obj-2">
+                Other Scenes and Novel Light Synthesis
+              </li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-novel-light-synthesis"
+              >
+                <video loop muted controls>
+                  <source
+                    src="assets/videos/01_st_bright_sky_view1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div
+                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-novel-light-synthesis"
+              >
+                <video loop muted controls>
+                  <source
+                    src="assets/videos/02_st_bright_sky_view2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-point-light-synthesis"
+              >
+                <video loop muted controls>
+                  <source
+                    src="assets/videos/03_st_point_light_view1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div
+                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-point-light-synthesis"
+              >
+                <video loop muted controls>
+                  <source
+                    src="assets/videos/04_st_point_light_view2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-12 col-md-12 portfolio-item isotope-item filter-sky-map"
+              >
+                <video loop muted controls>
+                  <source
+                    src="assets/videos/05_lwp_sky_view1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <!-- End Portfolio Item -->
+
+              <div
+                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-obj-2"
+              >
+                <video loop muted controls>
+                  <source
+                    src="assets/videos/06_lk2_dark.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div
+                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-obj-2"
+              >
+                <video loop muted controls>
+                  <source src="assets/videos/07_lk2_sky.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+      <!-- Bibfile Section -->
+      <section id="bib" class="services section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Bib Entry</h2>
+        </div>
+
+        <div class="container">
+          <!-- End Service Item -->
+          <pre>
+            @inproceedings{kaleta2025lumigauss,
+                title     = {{LumiGauss: Relightable Gaussian Splatting in the Wild}},
+                author    = {
+                    Kaleta, Joanna 
+                    and Kania, Kacper 
+                    and Trzci{\'n}ski, Tomasz
+                    and Kowalski, Marek
+                },
+                booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+                year      = {2025}
+            } </pre
+          >
+        </div>
+      </section>
+      <!-- /Bib Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span>
+          <strong class="px-1 sitename">Kacper Kania</strong>
+          <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by
+          <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by
+          <a href="https://themewagon.com">ThemeWagon</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://kit.fontawesome.com/2f4b26bfb0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".tooltipped");
+        var instances = M.Tooltip.init(elems, options);
+      });
+
+      // Or with jQuery
+
+      $(document).ready(function () {
+        $(".tooltipped").tooltip();
+      });
+    </script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
