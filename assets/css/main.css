@@ -616,7 +616,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -1565,7 +1565,6 @@ section,
   text-align: center;
   margin-top: 2em;
   display: flex;
-  float: left;
   justify-content: center;
 }
 
@@ -1592,10 +1591,79 @@ section,
 
 
 #abstract {
-  text-align: justify;
-  line-height: small;
-  margin-top: 2em;
-  font-size: large;
+  margin-top: 40px;
+  scroll-margin-top: 24px;
+}
+
+.hero .paper-abstract h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.hero .teaser {
+  margin: 36px 0 0;
+}
+
+.hero .teaser img {
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#abstract p,
+.method p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero .conference {
+  margin: 18px 0 24px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.authors > .col {
+  flex: 0 1 auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.method .section-title {
+  padding-bottom: 24px;
+}
+
+#method .section-title h2,
+#visuals .section-title h2 {
+  padding-bottom: 0;
+}
+
+#method .section-title h2::before,
+#method .section-title h2::after,
+#visuals .section-title h2::before,
+#visuals .section-title h2::after {
+  content: none;
+}
+
+.method-figure {
+  margin: 28px 0 0;
+}
+
+.method-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.method-figure figcaption {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
 #title {
@@ -1612,7 +1680,92 @@ section,
 }
 
 .social-links {
-  margin-top: 8em !important;
+  margin-top: 24px !important;
   text-align: center;
   font-size: larger !important;
+}
+
+/* One independently controlled video carousel per results section. */
+.video-carousel {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+}
+
+.video-carousel + .video-carousel {
+  margin-top: 64px;
+}
+
+.video-carousel h3 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+.video-carousel-layout {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 16px;
+}
+
+.video-slide {
+  margin: 0;
+}
+
+.video-slide[hidden] {
+  display: none;
+}
+
+.video-slide video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: #000;
+  border-radius: 8px;
+}
+
+.video-slide figcaption,
+.video-position {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.video-arrow {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  background: var(--background-color);
+  color: var(--accent-color);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-arrow:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+
+.video-arrow:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+@media (max-width: 575px) {
+  .video-carousel-layout {
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 8px;
+  }
+
+  .video-arrow {
+    width: 36px;
+    height: 44px;
+    border-radius: 18px;
+  }
 }

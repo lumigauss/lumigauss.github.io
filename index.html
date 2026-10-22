@@ -87,6 +87,11 @@
             >
           </li>
           <li>
+            <a href="#method" title="Move to the method"
+              ><i class="bi bi-diagram-3 navicon"></i><span>Method</span></a
+            >
+          </li>
+          <li>
             <a href="#visuals" title="Move to the visuals"
               ><i class="bi bi-image-alt navicon"></i><span>Visuals</span></a
             >
@@ -130,25 +135,7 @@
               <h1 id="title">
                 LumiGauss: Relightable Gaussian Splatting in the Wild
               </h1>
-              <p id="abstract">
-                Decoupling lighting from geometry using unconstrained photo
-                collections is notoriously challenging. Solving it would benefit
-                many users as creating complex 3D assets takes days of manual
-                labor. Many previous works have attempted to address this issue,
-                often at the expense of output fidelity, which questions the
-                practicality of such methods. We introduce LumiGauss—a technique
-                that tackles 3D reconstruction of scenes and environmental
-                lighting through 2D Gaussian Splatting. Our approach yields
-                high-quality scene reconstructions and enables realistic
-                lighting synthesis under novel environment maps. We also propose
-                a method for enhancing the quality of shadows, common in outdoor
-                scenes, by exploiting spherical harmonics properties. Our
-                approach facilitates seamless integration with game engines and
-                enables the use of fast precomputed radiance transfer. We
-                validate our method on the NeRF-OSR dataset, demonstrating
-                superior performance over baseline methods. Moreover, LumiGauss
-                can synthesize realistic images for unseen environment maps.
-              </p>
+              <p class="conference">WACV 2025</p>
 
               <div class="container-fluid">
                 <div class="row authors">
@@ -202,140 +189,167 @@
                 ></a>
               </div>
 
-              <!-- <div class="social-links">
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-            </div> -->
+              <figure class="teaser">
+                <img
+                  src="assets/img/teaser.png"
+                  width="2010"
+                  height="750"
+                  alt="LumiGauss reconstructs a fountain scene, separates albedo and surface normals, and renders the scene under novel lighting with predicted shadows."
+                />
+              </figure>
+
+              <div id="abstract" class="paper-abstract">
+                <h2>Abstract</h2>
+              <p>
+                Decoupling lighting from geometry using unconstrained photo
+                collections is notoriously challenging. Solving it would benefit
+                many users as creating complex 3D assets takes days of manual
+                labor. Many previous works have attempted to address this issue,
+                often at the expense of output fidelity, which questions the
+                practicality of such methods. We introduce LumiGauss—a technique
+                that tackles 3D reconstruction of scenes and environmental
+                lighting through 2D Gaussian Splatting. Our approach yields
+                high-quality scene reconstructions and enables realistic
+                lighting synthesis under novel environment maps. We also propose
+                a method for enhancing the quality of shadows, common in outdoor
+                scenes, by exploiting spherical harmonics properties. Our
+                approach facilitates seamless integration with game engines and
+                enables the use of fast precomputed radiance transfer. We
+                validate our method on the NeRF-OSR dataset, demonstrating
+                superior performance over baseline methods. Moreover, LumiGauss
+                can synthesize realistic images for unseen environment maps.
+              </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- /Hero Section -->
 
-      <!-- Portfolio Section -->
-      <section id="visuals" class="portfolio section">
-        <!-- Section Title -->
+      <!-- Method Section -->
+      <section id="method" class="method section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Qualitative Results</h2>
+          <h2>Method</h2>
         </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter=".filter-novel-light-synthesis"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <!-- <li data-filter="*" class="filter-active">All</li> -->
-              <li
-                data-filter=".filter-novel-light-synthesis"
-                class="filter-active"
-              >
-                Novel View and Trained Light Synthesis
-              </li>
-              <li data-filter=".filter-point-light-synthesis">
-                Point Light Synthesis
-              </li>
-              <li data-filter=".filter-sky-map">Sky Map</li>
-              <li data-filter=".filter-obj-2">
-                Other Scenes and Novel Light Synthesis
-              </li>
-            </ul>
-            <!-- End Portfolio Filters -->
-
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-novel-light-synthesis"
-              >
-                <video loop muted controls>
-                  <source
-                    src="assets/videos/01_st_bright_sky_view1.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-novel-light-synthesis"
-              >
-                <video loop muted controls>
-                  <source
-                    src="assets/videos/02_st_bright_sky_view2.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-point-light-synthesis"
-              >
-                <video loop muted controls>
-                  <source
-                    src="assets/videos/03_st_point_light_view1.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-point-light-synthesis"
-              >
-                <video loop muted controls>
-                  <source
-                    src="assets/videos/04_st_point_light_view2.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-12 col-md-12 portfolio-item isotope-item filter-sky-map"
-              >
-                <video loop muted controls>
-                  <source
-                    src="assets/videos/05_lwp_sky_view1.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-obj-2"
-              >
-                <video loop muted controls>
-                  <source
-                    src="assets/videos/06_lk2_dark.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-obj-2"
-              >
-                <video loop muted controls>
-                  <source src="assets/videos/07_lk2_sky.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <!-- End Portfolio Item -->
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <p>
+                LumiGauss learns a relightable scene from unconstrained photo
+                collections with varying viewpoints and lighting conditions.
+                We represent the scene with 2D Gaussians, each with a surface
+                normal, albedo, and a learnable radiance transfer function
+                represented by spherical harmonics. A learned embedding for each
+                training image predicts its environment lighting.
+              </p>
+              <figure class="method-figure">
+                <img
+                  src="assets/img/method-overview.png"
+                  class="img-fluid"
+                  width="2020"
+                  height="830"
+                  loading="lazy"
+                  alt="LumiGauss pipeline: photo collections and calibrated cameras produce 2D Gaussians and environment lighting, combined in shadowed and unshadowed models to render novel views and lighting."
+                />
+                <figcaption>
+                  The unshadowed model
+                  combines surface normals, albedo, and environment lighting.
+                  The shadowed model adds a learned radiance transfer function
+                  to capture shadows. Gaussian splatting renders the scene from
+                  novel viewpoints and under new lighting.
+                </figcaption>
+              </figure>
             </div>
-            <!-- End Portfolio Container -->
           </div>
         </div>
       </section>
-      <!-- /Portfolio Section -->
+      <!-- /Method Section -->
+
+      <!-- Qualitative Results -->
+      <section id="visuals" class="portfolio section">
+        <div class="container section-title">
+          <h2>Qualitative Results</h2>
+        </div>
+        <div class="container">
+          <section class="video-carousel" id="novel-view-relighting" aria-labelledby="novel-view-relighting-title" aria-roledescription="carousel">
+            <h3 id="novel-view-relighting-title">Novel View and Relighting</h3>
+            <div class="video-carousel-layout">
+              <button class="video-arrow video-previous" type="button" aria-label="Previous video: Novel View and Relighting" aria-controls="novel-view-relighting-slides">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <div class="video-slides" id="novel-view-relighting-slides">
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="1 of 5: Fontana di Trevi">
+                  <video autoplay loop muted controls playsinline preload="metadata" aria-label="Novel View and Relighting: Fontana di Trevi">
+                    <source src="assets/videos/teaser.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Fontana di Trevi</figcaption>
+                </figure>
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="2 of 5: Staatstheater — View 1" hidden>
+                  <video loop muted controls playsinline preload="metadata" aria-label="Novel View and Relighting: Staatstheater — View 1">
+                    <source src="assets/videos/01_st_bright_sky_view1.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Staatstheater — View 1</figcaption>
+                </figure>
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="3 of 5: Staatstheater — View 2" hidden>
+                  <video loop muted controls playsinline preload="metadata" aria-label="Novel View and Relighting: Staatstheater — View 2">
+                    <source src="assets/videos/02_st_bright_sky_view2.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Staatstheater — View 2</figcaption>
+                </figure>
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="4 of 5: Landwehrplatz" hidden>
+                  <video loop muted controls playsinline preload="metadata" aria-label="Novel View and Relighting: Landwehrplatz">
+                    <source src="assets/videos/05_lwp_sky_view1.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Landwehrplatz</figcaption>
+                </figure>
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="5 of 5: Ludwigskirche" hidden>
+                  <video loop muted controls playsinline preload="metadata" aria-label="Novel View and Relighting: Ludwigskirche">
+                    <source src="assets/videos/07_lk2_sky.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Ludwigskirche</figcaption>
+                </figure>
+              </div>
+              <button class="video-arrow video-next" type="button" aria-label="Next video: Novel View and Relighting" aria-controls="novel-view-relighting-slides">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <p class="video-position" aria-live="polite" aria-atomic="true">1 / 5</p>
+          </section>
+          <section class="video-carousel" id="single-light-relighting" aria-labelledby="single-light-relighting-title" aria-roledescription="carousel">
+            <h3 id="single-light-relighting-title">Relighting with a Single Light Source</h3>
+            <div class="video-carousel-layout">
+              <button class="video-arrow video-previous" type="button" aria-label="Previous video: Relighting with a Single Light Source" aria-controls="single-light-relighting-slides">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <div class="video-slides" id="single-light-relighting-slides">
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="1 of 3: Staatstheater — View 1">
+                  <video loop muted controls playsinline preload="metadata" aria-label="Relighting with a Single Light Source: Staatstheater — View 1">
+                    <source src="assets/videos/03_st_point_light_view1.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Staatstheater — View 1</figcaption>
+                </figure>
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="2 of 3: Staatstheater — View 2" hidden>
+                  <video loop muted controls playsinline preload="metadata" aria-label="Relighting with a Single Light Source: Staatstheater — View 2">
+                    <source src="assets/videos/04_st_point_light_view2.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Staatstheater — View 2</figcaption>
+                </figure>
+                <figure class="video-slide" role="group" aria-roledescription="slide" aria-label="3 of 3: Ludwigskirche" hidden>
+                  <video loop muted controls playsinline preload="metadata" aria-label="Relighting with a Single Light Source: Ludwigskirche">
+                    <source src="assets/videos/06_lk2_dark.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>Ludwigskirche</figcaption>
+                </figure>
+              </div>
+              <button class="video-arrow video-next" type="button" aria-label="Next video: Relighting with a Single Light Source" aria-controls="single-light-relighting-slides">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <p class="video-position" aria-live="polite" aria-atomic="true">1 / 3</p>
+          </section>
+        </div>
+      </section>
+      <!-- /Qualitative Results -->
 
       <!-- Bibfile Section -->
       <section id="bib" class="services section">
