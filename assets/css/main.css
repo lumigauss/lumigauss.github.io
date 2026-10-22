@@ -1666,8 +1666,14 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
+.paper-title {
+  container-type: inline-size;
+}
+
 #title {
   text-align: center;
+  font-size: min(2.5rem, 4.3cqi);
+  white-space: nowrap;
 }
 
 .portfolio video {
