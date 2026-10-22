@@ -1638,14 +1638,17 @@ section,
 }
 
 #method .section-title h2,
-#visuals .section-title h2 {
+#visuals .section-title h2,
+#bib .section-title h2 {
   padding-bottom: 0;
 }
 
 #method .section-title h2::before,
 #method .section-title h2::after,
 #visuals .section-title h2::before,
-#visuals .section-title h2::after {
+#visuals .section-title h2::after,
+#bib .section-title h2::before,
+#bib .section-title h2::after {
   content: none;
 }
 
